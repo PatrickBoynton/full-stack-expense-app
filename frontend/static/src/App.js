@@ -5,19 +5,14 @@ import {useEffect, useState} from 'react';
 
 const App = () => {
     const [expenses, setExpenses] = useState([]);
-    const test = async () => {
-        const response = await fetch('/api/v1/expenses/', {
-            headers: {
-                'Content-Type': 'Application/Json',
-            }
-        });
-        const data = await response.text();
-        console.log(data);
-        console.log(data);
-    }
+    const fetchExpenses = async () => {
+        const response = await fetch('/api/v1/expenses/');
+        const data = await response.json();
+        setExpenses([...data]);
+    };
 
     useEffect(() => {
-        test()
+        fetchExpenses();
     }, []);
 
     const addExpense = (expense) => {
