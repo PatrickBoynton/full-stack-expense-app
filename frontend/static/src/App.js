@@ -8,7 +8,11 @@ const App = () => {
     const fetchExpenses = async () => {
         const response = await fetch('/api/v1/expenses/');
         const data = await response.json();
-        setExpenses([...data]);
+        const expenseArray = [];
+        data.map(expense => expenseArray.push({title: expense.title,
+                                               amount: +expense.amount,
+                                               date: new Date(expense.date)}));
+        setExpenses(expenseArray);
     };
 
     useEffect(() => {
