@@ -8,10 +8,19 @@ const ExpenseForm = ({onSubmitExpense}) => {
     const [editMode, setEditMode] = useState(false);
 
     const handleInput = (event) => {
-        setInputValue({
-            ...inputValue,
-            [event.target.name]: event.target.value
-        });
+        if (event.target.name === 'date') console.log(event.target.value);
+
+        if (event.target.name === 'amount') {
+            setInputValue({
+                ...inputValue,
+                [event.target.name]: +event.target.value,
+            });
+        } else {
+            setInputValue({
+                ...inputValue,
+                [event.target.name]: event.target.value,
+            });
+        }
     };
 
     const handleSubmit = (event) => {
