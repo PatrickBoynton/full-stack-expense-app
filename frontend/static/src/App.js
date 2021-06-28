@@ -5,13 +5,17 @@ import {useEffect, useState} from 'react';
 
 const App = () => {
     const [expenses, setExpenses] = useState([]);
+
     const fetchExpenses = async () => {
         const response = await fetch('/api/v1/expenses/');
         const data = await response.json();
         const expenseArray = [];
-        data.map(expense => expenseArray.push({title: expense.title,
-                                               amount: +expense.amount,
-                                               date: new Date(expense.date)}));
+        data.map(expense => expenseArray.push({
+            id: expense.id,
+            title: expense.title,
+            amount: +expense.amount,
+            date: new Date(expense.date)
+        }));
         setExpenses(expenseArray);
     };
 
