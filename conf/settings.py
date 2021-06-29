@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     # Installed apps.
     'expenses.apps.ExpensesConfig',
+    'income.apps.IncomeConfig',
     'api.apps.ApiConfig',
     'frontend.apps.FrontendConfig',
 ]
