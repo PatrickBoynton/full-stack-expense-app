@@ -9,6 +9,8 @@ gunicorn = "*"
 whitenoise = "*"
 djangorestframework = "~=3.11.1"
 dj-database-url = "*"
+celery = "*"
+redis = "*"
 
 [dev-packages]
 
