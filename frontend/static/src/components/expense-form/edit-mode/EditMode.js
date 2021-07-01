@@ -23,6 +23,17 @@ const EditMode = ({inputValue, handleInput, setEditMode}) => (
                        step="0.01"/>
             </div>
             <div className="new-expense__control">
+                <label htmlFor="is_recurring">Is Recurring?</label>
+                <input type="checkbox" name="is_recurring" id="is_recurring"/>
+            </div>
+            <div className="new-expense__control">
+                <label htmlFor="duration" id="duration-label">When is it due?</label>
+                <select name="duration" id="duration" disabled>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+            <div className="new-expense__control">
                 <label htmlFor="Date">Date</label>
                 <input type="date"
                        value={inputValue.date}
