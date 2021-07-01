@@ -27,3 +27,14 @@
 .new-expense__actions button {
     padding: 10px 15px;
 }
+#duration {
+    padding: 10px 80px;
+    margin-left: 82px;
+    border-radius: 6px;
+    background-color: #242424;
+    border: 2px solid #fff;
+    color: #fff;
+}
+#duration-label{
+    margin-left: 82px;
+}
