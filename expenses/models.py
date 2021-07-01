@@ -9,7 +9,7 @@ class Expenses(models.Model):
                                  max_digits=9,
                                  default=0)
     is_recurring = models.BooleanField(default=False)
-    date = models.DateTimeField(default=datetime.today())
+    date_created = models.DateTimeField(default=datetime.today())
 
     def __str__(self):
         return self.title + ' ' + str(self.date)
