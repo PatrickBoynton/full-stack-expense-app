@@ -15,7 +15,7 @@ const Expenses = ({expenses}) => {
 
     const filter = expenses
         .filter((expense) => expense.date.getFullYear().toString() === year)
-            .map((expense) => <ExpenseItem key={expense.id} year={year} expenses={expense}/>);
+        .map((expense) => <ExpenseItem key={expense.id} year={year} expenses={expense}/>);
 
     return (
         <Card>
