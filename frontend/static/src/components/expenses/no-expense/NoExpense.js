@@ -2,14 +2,13 @@ import React from 'react';
 import Card from '../../ui/Card';
 import './NoExpense.css';
 
-const NoExpense = props => {
+const NoExpense = (props) => {
     return (
         <Card>
             <div className="no-expense">
-                <h1>No expenses for this year.</h1>
+                <h1>Pick a Year</h1>
             </div>
         </Card>
-
     );
 };
 
