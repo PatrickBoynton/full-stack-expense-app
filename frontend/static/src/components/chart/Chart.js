@@ -4,12 +4,13 @@ import TotalDisplay from '../expenses/expense-filter/total-display/TotalDisplay'
 import './Chart.css';
 
 const Chart = ({data}) => {
-    const dataPoints = data.map(point => point.value);
+    const dataPoints = data.map((point) => point.value);
+
     const maxValue = Math.max(...dataPoints);
-    const total = dataPoints.reduce((a, b) => (a + b));
+    const total = dataPoints.reduce((a, b) => a + b);
     return (
         <section className="chart">
-            {data.map(point =>
+            {data.map((point) =>
                 <ChartBar key={point.label}
                           value={point.value}
                           maxValue={maxValue}
