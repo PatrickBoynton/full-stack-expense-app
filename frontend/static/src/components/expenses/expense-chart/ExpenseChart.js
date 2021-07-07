@@ -21,9 +21,8 @@ const ExpenseChart = ({expenses}) => {
         const expenseMonth = expense.date.getMonth();
         data[expenseMonth].value += expense.amount;
     }
-    return (
-        <Chart data={data}/>
-    );
+
+    return <Chart data={data}/>;
 };
 
 export default ExpenseChart;
