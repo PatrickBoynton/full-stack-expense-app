@@ -10,12 +10,13 @@ const App = () => {
         const response = await fetch('/api/v1/expenses/');
         const data = await response.json();
         const expenseArray = [];
-        data.map(expense => expenseArray.push({
-            id: expense.id,
-            title: expense.title,
-            amount: +expense.amount,
-            date: new Date(expense.date)
-        }));
+        data.map((expense) => expenseArray.push({
+                id: expense.id,
+                title: expense.title,
+                amount: +expense.amount,
+                date: new Date(expense.date_created),
+            })
+        );
         setExpenses(expenseArray);
     };
 
@@ -31,7 +32,8 @@ const App = () => {
         <>
             <NewExpense onAddExpense={addExpense}/>
             <Expenses expenses={expenses}/>
-        </>);
+        </>
+    );
 };
 
 export default App;
