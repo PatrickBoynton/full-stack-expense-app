@@ -42,7 +42,8 @@ const EditMode = ({inputValue, handleInput, setEditMode}) => (
                        id="date"/>
             </div>
             <div className="new-expense__actions">
-                <button style={{marginRight: '12px'}} className="edit" onClick={() => setEditMode(false)}>Cancel</button>
+                <button style={{marginRight: '12px'}} className="edit" onClick={() => setEditMode(false)}>Cancel
+                </button>
                 <button className="edit" type="submit">Add Expense</button>
             </div>
         </div>
